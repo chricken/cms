@@ -1,0 +1,16 @@
+nav {
+    position: relative;
+    display: block;
+    background: #ccc;
+}
+
+.navLink {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.navLink:hover {
+    background-color: rgba(0,0,0,.2);
+}
