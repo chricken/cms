@@ -14,3 +14,20 @@ nav {
 .navLink:hover {
     background-color: rgba(0,0,0,.2);
 }
+
+/* Formulare */
+input, textarea {
+    position: relative;
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    font-size: 16px;
+    width: 300px;
+}
+input[type="checkbox"], input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+textarea{
+    height: 200px;
+}

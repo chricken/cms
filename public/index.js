@@ -40,21 +40,37 @@ const processContents = contents => {
 
 
 const loadContents = () => {
-    
+    // Inhalte laden
+    console.log('loadContent');
+
+    fetch('/load_contents',{
+        method: 'post',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(contentIDs)
+    }).then(
+        res => res.json()
+    ).then(
+        processContents
+    ).catch(
+        console.log        
+    )
+
+    /*
     ajax.post('/load_contents', contentIDs).then(
         processContents
     ).catch(
         console.log
     )
 
+    */
 }
 
 const processPagetree = pagetree => {
     // Navigation zeichnen
     pagetree.forEach(page => {
         let location = window.location.pathname;
-        //console.log(location);
-        //console.log(homeURL);
+        console.log(location);
+        console.log(homeURL);
 
         location = mapToHome.includes(location) ? homeURL : location;
         if (location == `/${page.name.replaceAll(' ', '%20')}`) {
